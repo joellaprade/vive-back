@@ -89,8 +89,7 @@ app.put('/putEvent/:id', async (req, res) => {
 
 app.delete('/deleteEvent/:id', async (req, res) => {
     const id = req.params.id;
-    //if(await authenticate(req.body.authentication, 'admin'))
-    console.log('ran')
+    if(await authenticate(req.body.authentication, 'admin'))
         await Event.findByIdAndDelete(id);
 })
 
