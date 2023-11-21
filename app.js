@@ -76,6 +76,17 @@ app.post('/registerUser', async (req, res) => {
     user.save();
 })
 
+app.put('/putEvent/:id', async (req, res) => {
+    const id = req.params.id;
+    var updatedInfo = req.body.parcel;
+    if(await authenticate(req.body.authentication, 'admin'))
+        await Event.findByIdAndUpdate(id, { 
+            nombreEvento: updatedInfo.nombreEvento,
+            fecha: updatedInfo.fecha,
+            linkEvento: updatedInfo.linkEvento
+        })
+})
+
 async function authenticate(data, level){
     var mail = data.mail;
     var password = data.password
