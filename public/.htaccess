@@ -1,0 +1,8 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/jlaprade/backend"
+PassengerBaseURI "/"
+PassengerNodejs "/home/jlaprade/nodevenv/backend/16/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+PassengerAppLogFile "/home/jlaprade/logs/vive.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
