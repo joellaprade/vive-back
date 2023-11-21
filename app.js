@@ -84,7 +84,7 @@ app.put('/putEvent/:id', async (req, res) => {
             nombreEvento: updatedInfo.nombreEvento,
             fecha: updatedInfo.fecha,
             linkEvento: updatedInfo.linkEvento
-        })
+        }, {new: true})
 })
 
 async function authenticate(data, level){
